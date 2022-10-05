@@ -18,7 +18,12 @@ function login(username, password) {
     userService.login(username, password).then(
       user => {
         dispatch(success(user));
-        history.push("/");
+        if(user.role==="Auditor"){
+          history.push("/Audit");
+        }
+        else{
+          history.push("/");
+        }
       },
       error => {
         dispatch(failure(error.toString()));

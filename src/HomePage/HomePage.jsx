@@ -28,7 +28,7 @@ class HomePage extends React.Component {
 
     render() {
         const { user, users } = this.props;
-        return (<div>         <Navbar bg="dark" variant="dark">
+        return (<div><Navbar bg="dark" variant="dark">
             <Navbar.Brand ></Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link ><Link to="/">Home</Link></Nav.Link>

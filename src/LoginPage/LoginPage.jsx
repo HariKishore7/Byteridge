@@ -14,11 +14,15 @@ class LoginPage extends React.Component {
         this.state = {
             username: '',
             password: '',
-            submitted: false
+            submitted: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    componentDidMount(){
+        const data= JSON.parse(localStorage.getItem("user"))
+        console.log("printing: "+data);
     }
 
     handleChange(e) {
@@ -31,6 +35,7 @@ class LoginPage extends React.Component {
 
         this.setState({ submitted: true });
         const { username, password } = this.state;
+        console.log("state "+this.state)
         if (username && password) {
             this.props.login(username, password);
         }

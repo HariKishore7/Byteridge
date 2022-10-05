@@ -25,3 +25,10 @@ a.nav-link {
 .user-screen {
   width: max-content !important;
 }
+
+.table,th,td{
+  border: 1px solid black;
+  /* width: 100%; */
+  max-width: 100%;
+  /* padding: 10px; */
+}
